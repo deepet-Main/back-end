@@ -1,9 +1,7 @@
-import app from "./index";
-import dotenv from "dotenv";
+import app from "./app";
+import "dotenv/config";
 
-dotenv.config();
-
-const PORT = Number(process.env.PORT);
+const PORT: Number = Number(process.env.PORT) || 5000;
 
 app.listen(PORT, () => {
   console.log(`Rodando na porta = ${PORT}`);
